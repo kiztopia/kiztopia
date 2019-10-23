@@ -1,0 +1,273 @@
+:root{
+    --backgound:black;
+    --color:white;
+}
+body * {
+    margin:0;
+    padding:0;
+    font-family:arial;
+    color:var(--color);
+    line-height: 150%;
+    
+}
+body{
+    background:var(--backgound);
+    overflow-x: hidden;
+    
+}
+
+.header {
+    display:flex;
+    flex-grow: 1;
+}
+
+
+.header .img{
+    width:200px;
+    margin:20px;
+    flex-grow: 1;
+}
+.header img{
+    width:120px
+}
+.header .img p{
+    width:50%;
+    display:inline-block;
+    margin:0 20px;
+}
+
+.header .img p span{
+    color:#4a743c;
+}
+.header  nav {
+
+}
+.header nav ul{
+    display:flex;
+    flex-grow: 1;
+}
+.header nav input{
+    display: none;
+    margin: 100px;
+}
+
+.header nav label{
+    display: none;
+}
+.header nav label img{
+    width:50px;
+    position: relative;
+    top:35px;
+    left:-22px;
+}
+.header nav ul li{
+    width:100px;
+    margin-top:30px;
+    text-align:center;
+    list-style:none;
+    color:#4a743c;
+    position:relative;
+}
+.header nav ul li:after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:2px;
+    width:100%;
+    background: #4a743c;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:0.2s;
+}
+
+.header nav ul li:hover:after{
+    transform:scaleX(1);
+}
+.header nav ul a {
+    text-decoration: none;
+    
+}
+.intro{
+    min-height:200px;
+    overflow:hidden;
+    position:relative;
+}
+.intro img{
+    overflow:hidden;
+    opacity:0.7;
+
+}
+.intro .rela{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+.intro p{
+    width:100%;
+    text-align:center;
+    padding-top:50px;
+    font-size:1.3em;
+    animation: fade 1s ease;
+}
+.intro h1{
+    width:100%;
+    text-align:center;
+    font-size:3.5em;
+    color:#4a743c
+}
+
+.dis p{
+    margin: 10px 10rem;
+    text-transform: capitalize;
+    padding:30px 70px;
+    line-height:170%
+}
+#team{
+    width: 30px;
+    background:red;
+    height: 20px;
+} 
+a{
+    display:block;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.cat p{
+    font-size:2em;
+}
+
+.cat ul {
+    width:400%;
+    display:flex;
+
+}
+
+.cat ul li{
+    width:100%;
+    flex-grow:1;
+    list-style:none;
+    text-align:center;
+    font-size:1.3em;
+    padding:0;
+    margin:0;
+    animation:slide 10s ease infinite alternate;
+}
+
+@keyframes slide{
+    0%{
+        transform:translatex(0);
+        color:#629117;
+    }
+    20%{
+        transform:translatex(0);
+        color:rgba(51, 80, 175, 0.64);
+    }
+    25%{
+       transform:translatex(-100%) ;
+    }
+    45%{
+       transform:translatex(-100%) ;
+    }
+    
+    50%{
+       transform:translatex(-200%) 
+    }
+    70%{
+       transform:translatex(-200%) 
+    }
+    75%{
+       transform:translatex(-300%) 
+    }
+    100%{
+       transform:translatex(-300%) 
+    }
+}
+
+
+@media screen and (max-width:500px){
+    nav ul{
+        flex-wrap:wrap;
+        width:100%;
+    }
+    nav ul li {
+        width:100% !important;
+        margin-top:20px  !important;
+        margin
+    }
+    .header {
+        height:100px;
+    }
+    .header .img  p{
+        font-size:16px;
+        position: relative;
+        top:-90%;
+        left:79%;
+    }
+    
+    .header .img{
+        margin: 0;
+        padding: 0;
+        width:70px;
+        text-align: left;
+    }
+    .header nav {
+        position: relative;
+    }
+    .header nav label{
+        display:contents;
+        color:#4a743c;
+    }
+    
+    .header nav ul{
+        display:inline-block;
+        position: absolute;
+        bottom: -110px;
+        left:-16px;
+        z-index: 1;
+        background: #4a743c;
+        
+        width:100px;
+        margin-top: 0px;
+    }
+    
+    .header ul li:nth-child(1) {
+        margin: 0px!important;
+    }
+    
+    .header ul li{
+    color: aliceblue!important;
+	width:50px!important;
+}
+    
+    .header nav input:checked ~ ul{
+        display:none;
+        animation: fade 2s infinite;
+    }
+    
+    .header nav ul li:after{
+        background: aliceblue;
+    }
+    
+    .header nav ul li:hover:after{
+    transform:scaleX(1.5);
+}
+    
+    .dis p{
+        padding: 10px;
+        font-size:0.8em;
+    }
+    
+}
+
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
